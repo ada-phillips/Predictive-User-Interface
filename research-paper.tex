@@ -1,0 +1,108 @@
+\documentclass[format=acmsmall, nonacm, authorversion, screen]{acmart}
+\usepackage{lmodern}
+\usepackage{totpages}
+\usepackage{natbib}
+
+\title{Predictive User Interface}
+\subtitle{Research Paper Final}
+\author{Ada Phillips}
+\orcid{0000-0002-6548-6043}
+\affiliation{%
+	\institution{Rochester Institute of Technology}}
+\email{ada_phillips@mail.rit.edu}
+
+
+
+%\authorsaddresses{}
+\begin{abstract}
+
+\end{abstract}
+
+\begin{document}
+
+
+\maketitle
+
+\section{Introduction}
+As technology has continued to become an ever-more-important part of our lives, so too have our lives become an ever-more-important part of our technology; our constant exposure to User Interfaces has warranted a drastic increase in research and development dedicated to simplifying and expediting our interactions with these interfaces. Many recent advances in UI efficiency have been made through the use of Predictive Interfaces: interfaces that anticipate what the user is likely to do next, and self-adjust to make those next steps easier to accomplish, or even execute those steps in advance of interaction by the user. 
+
+These Predictive Interfaces implement careful analysis of usage trends, both global and user-specific, coupled with the immediate and recent interactions of the user, to make their predictions about what the user intends to do next. The interface is then adapted, with suggestions, hints, automatic selections, or a number of other possible changes, to make it easier for the user to carry out those next actions. If the user selects, or otherwise engages with, the adapted change, the decision is often reinforced within the algorithm as having been a correct assessment, feeding into the underlying algorithms and enhancing future predictions. 
+
+With the rise of machine learning, advanced algorithms, and so-called 'big data' from which to draw conclusions and patterns, we have observed a rise in the prevalence of self-customizing user interface, seeking to enhance the user's experience. These predictive interfaces may soon be the standard for interface design and, as such, need to be more broadly understood by a wider audience of engineers. This paper is intended to be an overview of the subject, with both contemporary and historical context. 
+
+
+\section{Literature Review} 
+As Predictive Interfaces have made their way into the spotlight of Human-Computer Interactions, a vast wealth of research has arisen, exploring potential applications for these interfaces \citep{bridle2005predictive, ruotsalo2014intent, ahmad2018selection, xia2014zerolatency}, as well as the impact they have on users and their tasks \citep{quinn2016costbenefit, ruotsalo2014intent, xia2014zerolatency}. A selection of such work, across a number of domains, is reviewed below.
+
+\subsection{US Patent Application 20160034139A1: Predictive User Interface \citep{schlumberg2014predictive}}
+Filed by Schlumberger Technology Corporation in 2014, this patent attempts to claim the entirety of predictive interface design. The summary details "generic predicted events [...] predicted using a generic predictor" in response to an event or domain object. While this application was rejected as being unpatentable, it still offers, due to the detail required in patent filing, useful insight into predictive interfaces, and, given that Schlumberger is an oil company, provides an understanding of just how ubiquitous these interfaces have become.
+
+\subsection{Predictive Menu Selection on a Mobile Phone \citep{bridle2005predictive}}
+This paper, published in 2005, discusses the use of machine learning and predictive interfaces to improve user experience for feature (non-smart) mobile phones. In addition to proposing and analyzing their own strategy for predicting user menu selections, the authors discussed many of the other strategies that were being explored around the same time. While the concepts have become far more popular in the mainstream lately, this paper reveals that work in the field of machine learning driven UX has actually been underway far longer than it appears.
+
+\subsection{A Cost-Benefit Study of Text Entry Suggestion Interaction \citep{quinn2016costbenefit}}
+Analyzing one of the more common forms of predictive interface, this study sought to evaluate whether or not mobile keyboard suggestions improve user performance time, given the increased cognitive load required to evaluate them. Researchers examined the time and effort to write out a given phrase, with and without the presence of suggestions, and found that the suggestions, while saving in key presses, slowed users down. The study also included a qualitative survey of user experience, however, which found that users greatly preferred the suggestions to be present: this suggests that the emotional impact of predictive interface could be of benefit to UX, even in cases where it harms efficiency.
+
+\subsection{Interactive Intent Modeling: Information Discovery Beyond Search \citep{ruotsalo2014intent}}
+This article focuses on the application of predictive intent modeling in information retrieval systems, such as search engines. A specific example of such a system was described and analyzed, in which user queries are processed by machine learning algorithms to determine likely "intents" for the query, and those intents are graphically represented, allowing for user selection and prioritization. Whereas many predictive interfaces are focused on improving the task execution time, the primary focus for prediction in information retrieval is improving the usefulness and novelty of the results. In addition to allowing for users to directly select the more accurate intents, the authors also discussed the possibility of wearables and psycho-physiological responses in determining usefulness of results.
+
+\subsection{The Importance of Visual Attention for Adaptive Interfaces \citep{gobel2016importance}}
+This paper by Swiss researchers seeks to investigate the potential role of detection and analysis of eye movements in predicting user intentions, and adapting the interface to match. Whereas most predictive approaches rely on a user's deliberate actions within a system, gaze detection is unique in that is can make use of subtle movements the user may not even be aware of. Using the example of a map application, the authors also discussed when, where, and how to make use of this additional input, to provide helpful guidance without interrupting the user. 
+
+\subsection{Selection Facilitation Schemes for Predictive Touch with Mid-air Pointing Gestures in Automotive Displays \citep{ahmad2018selection}}
+Centered around automotive displays, this paper discusses various approaches for predictive interface to limit the attention and effort needed to interact with the displays while driving. The authors found, through experimentation and analysis of numerous methods, that mid-air pointing prediction was the most effective touch-free interface method. Having been published less than a month ago, this paper provides detailed insight into the immediate present of predictive interfaces.
+
+\subsection{Gaze-Based Virtual Task Predictor \citep{cig2014gaze}}
+The primary focus of this paper is the use of eye movement and focus for predicting a user's intended actions in with a pen-based interface, such as a drawing tablet. In most current implementations of pen-based interaction, secondary interfaces such as buttons or keypresses must be used to specify the different task a user can perform; with the system implemented by the authors, the user's eye movements are tracked, and used to determine which action the user intended. With a database of synchronized sketch and gaze data used to teach an online machine learning algorithm, this system was found to have a success rate of 80\%, and perform significantly better than many alternative pen interaction prediction methods, such as pen-stroke analysis. 
+
+\subsection{P-Recognition: You Are Already Recognized \citep{manabe2009recognition}}
+Focusing on pen-based interfaces, the proposed system in this paper makes use of pen position, tilt, and pressure data, as well as the change in this data, to predict a user's intended pen-stroke before it is made. By making these predictions in advance of the user's actual action, the results can be displayed in real-time; in systems where the action is not determined until after the user has begun, there can be significant delay in output. Pen data from several sets of trials was used with a hidden markov model to predict the outcome of several additional trials. While no functional software resulted from the experiments described in this paper, the researchers did find that pen-strokes could be differentiated with an 70-80\% accuracy in novice users, suggesting the usefulness of this "P-recognition". 
+
+\subsection{Zero-latency Tapping: Using Hover Information to Predict Touch Locations and Eliminate Touchdown Latency \citep{xia2014zerolatency}}
+In this paper, researchers presented a method for predicting user interaction with a touch-screen interface, by analyzing 3D finger movement data. The primary use-case investigated here was the application the use of predictions to lower or eliminate latency between actual interaction and visual feedback, although the authors did discuss other potential benefits: using the prediction to begin computing the results of the action, thereby reducing programmatic latency, as well as using the prediction values to contrast with, and recognize, accidental input. It was found that interactions could be accurately predicted an average of 128ms before the actual touch input, as opposed to the 75ms post-input latency carried by most commercial touch-screens. The team used visual hand-tracking techniques in their example, but also discussed the application of their methods to other tracking data, such as hover-sensing. 
+
+\subsection{PZBoard: A Prediction-based Zooming Interface for Supporting Text Entry on a Mobile Device \citep{aiyoshizawa2016pzboard}}
+This paper, from researchers at Saitama University in Japan, proposes a touch-screen keyboard interface that makes use of touch predictions to magnify the keys a user is likely to hit next, making the correct key easier to select. While many existing keyboard magnification methods involve additional touches or other direct interaction by the user, their proposed system makes use of an android device's Hover data to predict finger movements across the screen, allowing them to decide magnify the correct portion of the keyboard without any direct interaction on the part of the user. This magnification, of otherwise diminutive keys, increases the accuracy of the user's final touch input, especially for those with pre-existing usability concerns. While no formal user studies were conducted with the proposed system, this piece offers a clear look at the potential impact of many input prediction methods.
+
+\subsection{Summary}
+Predictive user interfaces are a very widespread topic in the modern User Experience landscape, and have been for some time. While much of the older research on the subject now describes features which have become standard for many users, much of the newer work in the field is increasingly innovative, and makes use of exciting new methods to simplify or improve user interaction. Much of the more recent work in Predictive Interfaces seems concentrated on the its application towards less-conventional interface devices: touchscreens, active pens, etc.,. Across the board, it seems that on-line machine learning algorithms are the go-to implementation for these predictive interfaces; given the personalized nature of many predictive features, such intelligent implementations are the only way to keep the predictions relevant and well-tuned to the current user. 
+
+
+\section{User Experience Implications}%Here is where I analyze the UX Implications for the technology. This should compare, consolidate, and critique the studies and/or systems I reviewed in my references to answer the following questions:
+With the immense range of interfaces in which Predictive methods can be used, and the innumerable applications within each interface, this technology has great implications for the future of Human-Computer Interactions. While many predictive interface use-cases focus on subtle improvements in usability, such as text suggestions of modern touchscreen keyboards \citep{quinn2016costbenefit} or touch prediction for feedback latency improvements \citep{xia2014zerolatency}, the use of unorthodox input methods to form predictions, such as gaze detection \citep{cig2014gaze}, or unconventional output visualizations based on these predictions \citep{ruotsalo2014intent}, have the capacity to revolutionize the future interface development.
+
+
+\subsection{Design Considerations}%What should the UX designer consider in utilizing the technology in applying the UX life cycle, especially in doing design?
+The growth of predictive interfaces as a medium for improving user interface leaves the modern User Experience engineer with much to consider, particularly in regards to input methods for a given system. 
+
+While the standard keyboard and mouse combination has become symbolic of HCI, ubiquitous computing has led to the rise in alternative input methods, and an increase in their importance for understanding and designing interfaces. Many of these input methods, despite being exceedingly useful in their specific domains, suffer from various drawbacks which can affect the user experience of the entire system. Touch-screen interfaces, for instance, are notorious for excess latency, a consequence of their underlying technologies; the use of predictive methods, however, has been proven capable of greatly mitigating this issue, or even reversing it, and allowing a system to take action, with great certainty of the user's intention, before (or without) the activating screen-press even being completed. This can not only increase user satisfaction, as shown in the user studies by Xia et al. \citep{xia2014zerolatency}, across all uses of that input, but also increase system safety in certain cases, such as the automotive displays discussed and analyzed by Ahmad et al. \citep{ahmad2018selection}. Pen-based systems, as well, suffer from various drawbacks, mostly owing to the necessity of additional forms of input for switching between various usage modes. As shown by both Manabe \& Fukumoto \citep{manabe2009recognition} and \c{C}\i\u{g} \& Sezgin \citep{cig2014gaze}, metadata surrounding the user's interaction can be used in place of manual interaction, to accurately predict the intended mode of operation. 
+
+While predictive inputs can stand to improve the usability of an entire hardware system, this falls well outside the scope for many projects (and consequently, many UX designers), which are instead concerned with a single application. There are still, however, many potential use-cases for predictive interface outside of direct human interaction. G\"{o}bel et al. \citep{gobel2016importance} discuss and implement the use of predictions, drawing from a multitude of available inputs, to tailor the output of an application, specifically the introduction of help messages in cases where a user appears to be lost. Additional such predictive outputs are discussed by Ruotsalo et al. \citep{ruotsalo2014intent}, in a novel search system wherein the predicted intentions of a user's search query are exposed to them directly, allowing the user to better understand and map their journey towards the information they're looking up. These are but a couple examples of where predictions can be used to tailor the output of a given system. 
+
+A chief concern in the implementation of predictive user interface is the predictive models themselves. A variety of different machine learning approaches are used in the pursuit of accurate predictions, with various different models. While the specific implementation of predictive models and intelligent systems is not the focus of this paper, online machine-learning algorithms seem to be the accepted standard of implementation in this field, to allow the models to self-reinforce in response to user acceptance or rejection of the predictions made. 
+
+\subsection{User Impact}%What are the pros and cons of utilizing the technology from the perspective of the users' UX?
+Perhaps more important than the design considerations for predictive interfaces is the impact they have on the users who interact with them. The entire point of developments in predictive interface technology is the improvement of over-all usability.
+
+A common concern for user impact when dealing with predictive interfaces is the predictability of the system from a user standpoint; while slight modifications to the UI can make a system more usable, extensive adaptation can confuse the user, and impede both learnability and memorability of a system. Bridle et al. \citep{bridle2005predictive} discussed the potential repercussions of extensive variation in their development of predictive menus, and the potential to frustrate users. Great care needs to be taken in the development of predictive interfaces to ensure consistency, and limit the influence of predictions in the over-all appearance of a platform. 
+
+While the primary aim of many predictive interface implementations is to increase efficiency of tasks within a system, depending on metric, that is often not the result. The analysis by Quinn \& Zhai \citep{quinn2016costbenefit} of one of the more common predictive interfaces, text suggestion on mobile phones, found that while number of presses needed to complete a given sentence was reduced, the amount of time taken was increased, owing to the cognitive load of parsing and evaluating the system's suggested words. Similarly, the intent modeling information retrieval system discussed by Ruotsalo et al. \citep{ruotsalo2014intent} found no increased task efficiency over traditional search methods; both interfaces, however, found increased user satisfaction and more positive emotional impact with the predictive functionality, which is arguably more important to the success of a project.
+
+Not all predictive systems result in a positive emotional impact, however, as many such interfaces stretch beyond usefulness and into the realm of the uncanny, causing users to become uncomfortable. The user studies by Xia et al. \citep{xia2014zerolatency} found that, in the case of no or negative latency introduced by input predictions, many users were put-off, citing a distrust of the algorithms underlying the system, regardless of observed accuracy. A large number of individuals find the concept of intelligent systems to be creepy, even in as limited scope as input prediction. 
+
+While not directly addressed by the majority of the literature reviewed in this paper, a massive betterment posed by the introduction of predictive user interfaces is the impact it can have on users with additional usability concerns. The PZBoard magnification system created by Aiyoshizawa \& Komuro \citep{aiyoshizawa2016pzboard}, for instance, could be a substantial boon for users who have increased trouble interacting with smaller buttons. Other such predictive systems could greatly assist those with motor control issues, and lead to vastly more usable and inclusive interfaces. 
+
+\section{Conclusion}%As a user would you use an interface based on the technology, why or why not?
+The rise of predictive user interfaces provides introduces a number of concerns, both in development and in resultant user experience, but, over-all, the trend of this technology's impact appears to be a positive one. The improvements in Emotional Impact, Accessibility, and Task Efficiency that pervade most predictive systems could go a long way towards improving the state of Human-Computer Interaction as a whole. I personally have used, and continue to use, systems that make use of these technologies, and I look forward to seeing them grow in number. 
+
+
+\bibliographystyle{acm}
+\bibliography{research-paper}
+\citestyle{acmnumeric}
+
+\end{document}
+
+
+\begin{abstract}
+As software User Interfaces continue to further permeate our lives, an ever increasing body of work is being undertaken to simplify those interfaces, and provide the smoothest possible transitions between tasks, often by the use of Predictive UI elements. 
+\end{abstract}
